@@ -7,9 +7,9 @@
 
 import UIKit
 
-class SurveyViewController: UIViewController {
+public class SurveyViewController: UIViewController {
 
-    private var questions: [SurveyQuestion] = []
+    public var questions: [SurveyQuestion] = []
     private var currentIndex = 0
     private var answers: [SurveyAnswer] = []
     private var theme: SurveyTheme!
@@ -19,7 +19,7 @@ class SurveyViewController: UIViewController {
     private let optionsStackView = UIStackView()
     private let nextButton = UIButton(type: .system)
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         showQuestion(at: currentIndex)
