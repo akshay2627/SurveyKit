@@ -10,14 +10,14 @@ import UIKit
 public class SurveyViewController: UIViewController {
 
     public var questions: [SurveyQuestion] = []
-    private var currentIndex = 0
-    private var answers: [SurveyAnswer] = []
+    public var currentIndex = 0
+    public var answers: [SurveyAnswer] = []
     public var theme: SurveyTheme!
-    private var onComplete: ((SurveyResult) -> Void)?
+    public var onComplete: ((SurveyResult) -> Void)?
 
-    private let questionLabel = UILabel()
-    private let optionsStackView = UIStackView()
-    private let nextButton = UIButton(type: .system)
+    public let questionLabel = UILabel()
+    public let optionsStackView = UIStackView()
+    public let nextButton = UIButton(type: .system)
 
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,7 @@ public class SurveyViewController: UIViewController {
         showQuestion(at: currentIndex)
     }
 
-    func configure(
+    public func configure(
         questions: [SurveyQuestion],
         theme: SurveyTheme,
         onComplete: @escaping (SurveyResult) -> Void
