@@ -22,17 +22,27 @@ pod install
 Usage
 import SurveyKit
 
-let surveyVC = SurveyViewController()
-surveyVC.themeColor = UIColor.systemBlue // Optional theming
-
-surveyVC.questions = [
-    SurveyQuestion(id: "q1", question: "How do you feel today?", options: ["Good", "Okay", "Bad"]),
-    SurveyQuestion(id: "q2", question: "How often do you exercise?", options: ["Daily", "Weekly", "Rarely"]),
-    // ...up to 10
+let questions = [
+    SurveyQuestion(id: "q1", question: "How satisfied are you with our service?", options: ["Very Satisfied", "Satisfied", "Neutral", "Dissatisfied"]),
+    SurveyQuestion(id: "q2", question: "Would you recommend us?", options: ["Yes", "No"]),
+    // Add up to 10 questions...
 ]
 
-present(surveyVC, animated: true, completion: nil)
+let theme = SurveyTheme(
+    primaryColor: .systemBlue,
+    backgroundColor: .white,
+    buttonColor: .systemBlue
+)
 
+let surveyVC = SurveyViewController()
+surveyVC.configure(questions: questions, theme: theme) { result in
+    // Handle completion
+    for answer in result.answers {
+        print("\(answer.questionId): \(answer.selectedOption)")
+    }
+}
+
+present(surveyVC, animated: true)
 
 Requirements
 iOS 13.0+
