@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SurveyKit'
-  s.version          = '0.0.4'
+  s.version          = '0.0.5'
   s.summary          = 'A lightweight and themable iOS SDK for 10-question surveys.'
   s.description      = <<-DESC
 SurveyKit is a native iOS SDK that provides a customizable UI to present 10 survey questions with multiple-choice answers and theme support for easy integration into any app.

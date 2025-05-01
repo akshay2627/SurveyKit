@@ -12,7 +12,7 @@ public class SurveyViewController: UIViewController {
     public var questions: [SurveyQuestion] = []
     private var currentIndex = 0
     private var answers: [SurveyAnswer] = []
-    private var theme: SurveyTheme!
+    public var theme: SurveyTheme!
     private var onComplete: ((SurveyResult) -> Void)?
 
     private let questionLabel = UILabel()
