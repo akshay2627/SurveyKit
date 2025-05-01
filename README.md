@@ -14,7 +14,7 @@ SurveyKit is a lightweight and customizable native iOS SDK for displaying a set 
 Add this to your `Podfile`:
 
 ```ruby
-pod 'SurveyKit'
+pod 'SurveyKit', '~> 0.0.6'
 
 Then run:
 pod install
