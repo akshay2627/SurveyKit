@@ -24,7 +24,15 @@ import SurveyKit
 
 let surveyVC = SurveyViewController()
 surveyVC.themeColor = UIColor.systemBlue // Optional theming
+
+surveyVC.questions = [
+    SurveyQuestion(id: "q1", question: "How do you feel today?", options: ["Good", "Okay", "Bad"]),
+    SurveyQuestion(id: "q2", question: "How often do you exercise?", options: ["Daily", "Weekly", "Rarely"]),
+    // ...up to 10
+]
+
 present(surveyVC, animated: true, completion: nil)
+
 
 Requirements
 iOS 13.0+
